@@ -1,10 +1,8 @@
 DESCRIPTION
-This is an ATM style program that can be used within the terminal with an interface asking for checking balance, depositing and withdrawing money and error messages if a minus number is entered or the amount being withdraw exceeds the balance.
+This is a calculator that will perform simple mathematic equations
+
 INSTRUCTIONS
-first open terminal/commmand line and navigate to the file folder where the script is saved.
-then type in the command line/Terminal "node ATM.js"
-this will start the ATM simulator and you will be prompted to choose an option.
-
-PLease try it and see what happens when you run out of balance!
-
-Enjoy!
+first open command line/Terminal and navigate the to folder where the calculator simulator is saved.
+Then type in the command line/terminal node Calculator.js. This will run the calculator.
+The calculator will prompt you to enter a number and operator and a number again to perform the function
+The calculator perform simple mathematic equations and includes error responses for multplication and Division of Zero.
