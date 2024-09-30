@@ -1,0 +1,10 @@
+DESCRIPTION
+This is an ATM style program that can be used within the terminal with an interface asking for checking balance, depositing and withdrawing money and error messages if a minus number is entered or the amount being withdraw exceeds the balance.
+INSTRUCTIONS
+first open terminal/commmand line and navigate to the file folder where the script is saved.
+then type in the command line/Terminal "node ATM.js"
+this will start the ATM simulator and you will be prompted to choose an option.
+
+PLease try it and see what happens when you run out of balance!
+
+Enjoy!
