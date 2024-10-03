@@ -174,7 +174,7 @@ header.sticky {
 }
 .services-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   align-items: center;
   text-align: center;
   gap: 2rem;
@@ -208,7 +208,7 @@ header.sticky {
 }
 .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px auto));
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   align-items: center;
   gap: 2rem;
   margin-top: 5rem;
