@@ -1,8 +1,3 @@
-DESCRIPTION
-This is a calculator that will perform simple mathematic equations
-
-INSTRUCTIONS
-first open command line/Terminal and navigate the to folder where the calculator simulator is saved.
-Then type in the command line/terminal node Calculator.js. This will run the calculator.
-The calculator will prompt you to enter a number and operator and a number again to perform the function
-The calculator perform simple mathematic equations and includes error responses for multplication and Division of Zero.
+Course assignments for Just IT Software Development bootcamp. 
+This includes ATM Calculator in javascript
+expenses tracker in Python and final portfolio assignment
