@@ -1,7 +1,7 @@
 //! ATM assignment
-const readline = require("readline");
+import { createInterface } from "node:readline";
 
-const rl = readline.createInterface({
+const rl = createInterface({
   input: process.stdin,
   output: process.stdout,
 });
@@ -23,42 +23,42 @@ function handleMenuSelection(option) {
       break;
     case "2":
       rl.question("Enter the amount to deposit: £", (amount) => {
-        depositMoney(parseFloat(amount));
+        depositMoney(Number.parseFloat(amount));
       });
       break;
     case "3":
       rl.question("Enter the amount to withdraw: £", (amount) => {
-        withdrawMoney(parseFloat(amount));
+        withdrawMoney(Number.parseFloat(amount));
       });
       break;
     case "4":
       console.log("Thank you for using the ATM. Goodbye!");
       rl.close();
       break;
-      Default: console.log("Invalid Option. PLease try again");
+      default: console.log("Invalid Option. Please try again");
       displayMenu();
       break;
   }
 }
 
 function depositMoney(amount) {
-  if (isNaN(amount) || amount <= 0) {
-    console.log("invalid amount. PLease enter a positive number");
+  if (Number.isNaN(amount) || amount <= 0) {
+    console.log("Invalid amount. Please enter a positive number");
   } else {
-    balance = +amount;
+    balance += amount;
     console.log(`you have successfully deposited £${amount.toFixed(2)}`);
   }
   displayMenu();
 }
 
 function withdrawMoney(amount) {
-  if (isNaN(amount) || amount <= 0) {
-    console.log("Invalid amount. PLease enter a smaller amount.");
+  if (Number.isNaN(amount) || amount <= 0) {
+    console.log("Invalid amount. Please enter a positive number.");
   } else if (amount > balance) {
     console.log("Insufficient funds. Please enter a smaller amount");
   } else {
     balance -= amount;
-    console.log(`you have successfully withdrawn £ ${aount.toFixed(2)}.`);
+    console.log(`you have successfully withdrawn £${amount.toFixed(2)}.`);
     console.log(`Your new balance is £${balance.toFixed(2)}.`);
   }
   displayMenu();

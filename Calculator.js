@@ -1,8 +1,8 @@
 //!Calculator assignment.
-const readline = require("readline");
+import { createInterface } from "node:readline";
 
 // Create an interface to read from the terminal
-const rl = readline.createInterface({
+const rl = createInterface({
   input: process.stdin,
   output: process.stdout,
 });
@@ -27,8 +27,8 @@ function calculate(num1, num2, operator) {
 }
 
 rl.question("Enter first number: ", (input1) => {
-  const num1 = parseFloat(input1);
-  if (isNaN(num1)) {
+  const num1 = Number.parseFloat(input1);
+  if (Number.isNaN(num1)) {
     console.log("Error: Invalid number!");
     rl.close();
     return;
@@ -36,8 +36,8 @@ rl.question("Enter first number: ", (input1) => {
 
   rl.question("Enter operator (+, -, *, /): ", (operator) => {
     rl.question("Enter second number: ", (input2) => {
-      const num2 = parseFloat(input2);
-      if (isNaN(num2)) {
+      const num2 = Number.parseFloat(input2);
+      if (Number.isNaN(num2)) {
         console.log("Error: Invalid number!");
         rl.close();
         return;
